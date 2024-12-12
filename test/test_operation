@@ -1,0 +1,9 @@
+from src.operations import add,sub
+
+def test_add(a,b):
+    assert add(4,3)==7
+    assert add(2,-3)==-1
+
+def test_sub(a,b):
+    assert sub(4,3)==1
+    assert sub(1,1)==0
