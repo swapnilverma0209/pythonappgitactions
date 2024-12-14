@@ -53,7 +53,7 @@ jobs:
       - name: Deploy to Render
         env:
           RENDER_API_KEY: 'rnd_YOiaYOT54LaUKvLhVCzD5dehoIfd'  # Store your Render API key in GitHub Secrets
-          RENDER_SERVICE_ID: '84f4df7'  # Store your Render Service ID in GitHub Secrets
+          RENDER_SERVICE_ID: 'srv-ctek22lds78s73dft15g'  # Store your Render Service ID in GitHub Secrets
         run: |
           curl -X POST \
             -H "Authorization: Bearer $RENDER_API_KEY" \
