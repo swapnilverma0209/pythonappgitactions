@@ -30,7 +30,7 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-  deploy:
+  build:
     runs-on: ubuntu-latest
     needs: test  # Deploy only if tests pass
 
@@ -52,7 +52,12 @@ jobs:
 
       - name: Build Python package
         run: |
-          python setup.py sdist bdist_wheel
+          if [ -f "setup.py" ]; then
+            python setup.py sdist bdist_wheel
+          else
+            echo "setup.py not found!"
+            exit 1
+          fi
 
       - name: Upload Python Build Artifacts
         uses: actions/upload-artifact@v3
