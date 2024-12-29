@@ -4,7 +4,7 @@ setup(
     name='my_project',  # Name of your project
     version='0.1.0',  # Initial version
     packages=find_packages(),  # Automatically discover and include all packages in the project
-    install_requires=[wheel],
+    install_requires=[],
     entry_points={  # If your project provides command-line scripts
         'console_scripts': [
             'my_project-cli=my_project.cli:main',  # Example CLI command
