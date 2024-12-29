@@ -46,7 +46,7 @@ jobs:
           source venv/bin/activate
           pip install --upgrade pip
           pip install -r requirements.txt
-          pip install wheel
+          pip install setuptools wheel
 
       - name: Build Python package
         run: |
