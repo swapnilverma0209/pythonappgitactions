@@ -46,10 +46,11 @@ jobs:
 
       - name: Build Python package
         run: |
+          mkdir -p build
           python setup.py sdist bdist_wheel
 
       - name: Upload Python Build Artifacts
         uses: actions/upload-artifact@v3
         with:
           name: python-build
-          path: dist/
+          path: build/
