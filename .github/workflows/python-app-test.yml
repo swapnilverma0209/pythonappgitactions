@@ -50,12 +50,7 @@ jobs:
 
       - name: Build Python package
         run: |
-          if [ -f "setup.py" ]; then
-            python setup.py sdist bdist_wheel
-          else
-            echo "setup.py not found!"
-            exit 1
-          fi
+          python setup.py bdist_wheel
 
       - name: Upload Python Build Artifacts
         uses: actions/upload-artifact@v3
